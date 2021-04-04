@@ -1,7 +1,20 @@
 {
   "name": "cra-template-varun",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
+  "author": "Varun Singh <31084854+Borumer@users.noreply.github.com",
+  "main": "template.json",
+  "description": "A quick start Create React App template with a better directory structure",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "cra-template",
+    "template"
+  ],
+  "files": [
+    "template",
+    "template.json"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
@@ -11,11 +24,19 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Borumer/cra-template-varun",
+    "directory": "/"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean-files": "rm -rf ./template/public ./template/src",
+    "copy-files": "cp -a ./src/. template/src && cp -a ./public/. template/public",
+    "prepublishOnly": "npm run clean-files && npm run copy-files"
   },
   "eslintConfig": {
     "extends": [
